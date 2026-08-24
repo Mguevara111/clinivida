@@ -11,4 +11,5 @@ export default defineConfig({
     'process.env': {},
     Buffer: ['buffer', 'Buffer'],
   },
+  base: '/clinivida/'
 })
