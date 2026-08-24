@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { CliniContextProvider } from './context/contextprovider.tsx'
 import { Buffer } from 'buffer';
 (window as any).Buffer = Buffer;
@@ -10,9 +11,9 @@ import App from './App.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <CliniContextProvider >
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <HashRouter>
             <App />
-        </BrowserRouter>
+        </HashRouter>
     </CliniContextProvider>
   </StrictMode>,
 )

@@ -1,4 +1,4 @@
-import { Route,Routes, Navigate } from 'react-router-dom'
+import { Routes,Route, Navigate } from 'react-router-dom'
 import { Layout } from './components/layout'
 import { Schendule } from './components/schendule'
 import { Secureconfirmation } from './components/secureconfrmation'

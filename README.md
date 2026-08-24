@@ -64,7 +64,18 @@ npm install
 npm run dev
 
 
-🇬🇧 English🏢 Project OverviewAt Clinivida healthcare network, telephone appointment scheduling faced major coordination issues: overlapping specialist schedules and bookings that exceeded patient insurance coverage limits.This project solves this problem through a real-time internal web platform built for front-desk personnel. The system validates business rules dynamically, blocks schedule conflicts, calculates copays based on insurance plans, and issues the official Digital Medical Order.🛠️ Key FeaturesMulti-Route Navigation with Protected Guards:/agendar: Interactive dashboard to select Patient, Specialist, and Timeslot./confirmacion: Preview page with financial breakdown and order generation./historial: Centralized registry of successfully confirmed appointments.Route Blocking: Automatic redirection from /confirmacion to /agendar with clear alert messages if there is no valid draft or if insurance/schedule rules are violated.Strict Scheduling Rules & Validations:Copay Calculation: Automatic discount from base cost (consultationFee) based on plan:PLAN_BASICO: 50% coverage.PLAN_PREMIUM: 80% coverage.SIN_SEGURO: 0% coverage (Full payment).Daily Coverage Limit: Automatic restriction for PLAN_BASICO patients attempting to book a 3rd appointment on the same day.Overlap Prevention: Validation preventing a specialist from taking two appointments at the exact same hour.Draft Persistence: Seamless sync with localStorage via useReducer so active drafts on /agendar survive page refreshes ($F5$) or browser crashes.PDF Documentation: Official Digital Medical Order generation on /confirmacion built with @react-pdf/renderer.🚀 Tech StackFrontend: React + TypeScript + ViteStyling: Tailwind CSSRouting: react-router-dom (v6+)State Management: useReducer + Context API + localStorage persistencePDF Generation: @react-pdf/renderer📦 Installation & Setup
+🇬🇧 English🏢 Project OverviewAt 
+Clinivida healthcare network, telephone appointment scheduling faced major coordination issues: overlapping specialist schedules and bookings that exceeded patient insurance coverage limits.This project solves this problem through a real-time internal web platform built for front-desk personnel. The system validates business rules dynamically, blocks schedule conflicts, calculates copays based on insurance plans, and issues the official Digital Medical Order.
+
+🛠️ Key FeaturesMulti-Route Navigation with Protected Guards:/agendar: Interactive dashboard to select Patient, Specialist, and Timeslot./confirmacion: Preview page with financial breakdown and order generation./historial: Centralized registry of successfully confirmed appointments.Route Blocking: Automatic redirection from /confirmacion to /agendar with clear alert messages if there is no valid draft or if insurance/schedule rules are violated.Strict Scheduling Rules & Validations:Copay 
+
+Calculation: Automatic discount from base cost (consultationFee) based on plan:PLAN_BASICO: 50% coverage.PLAN_PREMIUM: 80% coverage.SIN_SEGURO: 0% coverage (Full payment).
+
+Daily Coverage Limit: Automatic restriction for PLAN_BASICO patients attempting to book a 3rd appointment on the same day.Overlap Prevention: Validation preventing a specialist from taking two appointments at the exact same hour.Draft Persistence: Seamless sync with localStorage via useReducer so active drafts on /agendar survive page refreshes ($F5$) or browser crashes.
+
+PDF Documentation: Official Digital Medical Order generation on /confirmacion built with @react-pdf/renderer.🚀 Tech StackFrontend: React + TypeScript + ViteStyling: Tailwind CSSRouting: react-router-dom (v6+)State Management: useReducer + Context API + localStorage persistencePDF Generation: @react-pdf/renderer
+
+📦 Installation & Setup
 
 # 1. Clone the repository
 git clone [https://github.com/Mguevara111/clinivida.git](https://github.com/Mguevara111/clinivida.git)
