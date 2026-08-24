@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@source "./src/**/*.html";
+
+@layer utilities{
+
+    input,select{
+        width: 20ch;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: grey;
+        border-radius: 1rem;
+        padding: 0.3rem;
+        cursor: pointer;
+        margin-bottom: 0.3rem;
+    }
+    
+
+    .button{
+        width: 12ch;
+        height: 30px;
+        border:none;
+        border-radius: 1rem;
+        display: flex;
+        color:wheat;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: gray;
+        padding: 0.5rem;
+    }
+    .button:hover{
+        filter:invert(100%);
+        transition:filter 2s ease-out;
+        
+    }
+
+    
+}
